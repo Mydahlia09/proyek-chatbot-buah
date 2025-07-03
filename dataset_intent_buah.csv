@@ -1,0 +1,77 @@
+intent,text,entity
+stok_buah_hari_ini,Apa saja buah yang tersedia hari ini?,
+stok_buah_hari_ini,Hari ini ada buah apa saja?,
+stok_buah_hari_ini,Buah apa yang tersedia hari ini?,
+stok_buah_hari_ini,Stok buah hari ini ada apa?,
+stok_buah_hari_ini,Ada buah apa saja yang bisa dibeli hari ini?,
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Senin?,hari=Senin
+stok_buah_berdasarkan_hari,Hari Senin ada buah apa?,hari=Senin
+stok_buah_berdasarkan_hari,Senin jual buah apa aja?,hari=Senin
+stok_buah_berdasarkan_hari,Ada buah apa hari Senin?,hari=Senin
+stok_buah_berdasarkan_hari,Stok buah untuk hari Senin apa saja?,hari=Senin
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Selasa?,hari=Selasa
+stok_buah_berdasarkan_hari,Hari Selasa ada buah apa?,hari=Selasa
+stok_buah_berdasarkan_hari,Selasa jual buah apa aja?,hari=Selasa
+stok_buah_berdasarkan_hari,Ada buah apa hari Selasa?,hari=Selasa
+stok_buah_berdasarkan_hari,Stok buah untuk hari Selasa apa saja?,hari=Selasa
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Rabu?,hari=Rabu
+stok_buah_berdasarkan_hari,Hari Rabu ada buah apa?,hari=Rabu
+stok_buah_berdasarkan_hari,Rabu jual buah apa aja?,hari=Rabu
+stok_buah_berdasarkan_hari,Ada buah apa hari Rabu?,hari=Rabu
+stok_buah_berdasarkan_hari,Stok buah untuk hari Rabu apa saja?,hari=Rabu
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Kamis?,hari=Kamis
+stok_buah_berdasarkan_hari,Hari Kamis ada buah apa?,hari=Kamis
+stok_buah_berdasarkan_hari,Kamis jual buah apa aja?,hari=Kamis
+stok_buah_berdasarkan_hari,Ada buah apa hari Kamis?,hari=Kamis
+stok_buah_berdasarkan_hari,Stok buah untuk hari Kamis apa saja?,hari=Kamis
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Jumat?,hari=Jumat
+stok_buah_berdasarkan_hari,Hari Jumat ada buah apa?,hari=Jumat
+stok_buah_berdasarkan_hari,Jumat jual buah apa aja?,hari=Jumat
+stok_buah_berdasarkan_hari,Ada buah apa hari Jumat?,hari=Jumat
+stok_buah_berdasarkan_hari,Stok buah untuk hari Jumat apa saja?,hari=Jumat
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Sabtu?,hari=Sabtu
+stok_buah_berdasarkan_hari,Hari Sabtu ada buah apa?,hari=Sabtu
+stok_buah_berdasarkan_hari,Sabtu jual buah apa aja?,hari=Sabtu
+stok_buah_berdasarkan_hari,Ada buah apa hari Sabtu?,hari=Sabtu
+stok_buah_berdasarkan_hari,Stok buah untuk hari Sabtu apa saja?,hari=Sabtu
+stok_buah_berdasarkan_hari,Buah apa yang tersedia hari Minggu?,hari=Minggu
+stok_buah_berdasarkan_hari,Hari Minggu ada buah apa?,hari=Minggu
+stok_buah_berdasarkan_hari,Minggu jual buah apa aja?,hari=Minggu
+stok_buah_berdasarkan_hari,Ada buah apa hari Minggu?,hari=Minggu
+stok_buah_berdasarkan_hari,Stok buah untuk hari Minggu apa saja?,hari=Minggu
+buah_per_musim,Buah apa saja yang tersedia di musim hujan?,musim=Hujan
+buah_per_musim,Apa saja buah musim hujan?,musim=Hujan
+buah_per_musim,Musim hujan biasanya jual buah apa?,musim=Hujan
+buah_per_musim,Saya ingin tahu buah musim hujan, musimmusim=Hujan
+buah_per_musim,Buah apa yang cocok di musim hujan?,musim=Hujan
+buah_per_musim,Buah apa saja yang tersedia di musim kemarau?,musim=Kemarau
+buah_per_musim,Apa saja buah musim kemarau?,musim=Kemarau
+buah_per_musim,Musim kemarau biasanya jual buah apa?,musim=Kemarau
+buah_per_musim,Saya ingin tahu buah musim kemarau, musimmusim=Kemarau
+buah_per_musim,Buah apa yang cocok di musim kemarau?,musim=Kemarau
+buah_per_lapak,Ada buah apa di lapak depan pasar?,lapak=Depan Pasar
+buah_per_lapak,Depan pasar jual buah apa?,lapak=Depan Pasar
+buah_per_lapak,Saya mau lihat buah di lapak depan pasar,lapak=Depan Pasar
+buah_per_lapak,Lapak depan pasar ada buah apa?,lapak=Depan Pasar
+buah_per_lapak,Stok buah di depan pasar apa saja?,lapak=Depan Pasar
+buah_per_lapak,Ada berapa macam buah di lapak depan pasar?,lapak=Depan Pasar
+buah_per_lapak,Tampilkan buah-buahan di lapak depan pasar,lapak=Depan Pasar
+buah_per_lapak,Buah apa saja yang dijual di lapak depan pasar?,lapak=Depan Pasar
+buah_per_lapak,Ada buah apa di lapak dekat taman?,lapak=Dekat Taman
+buah_per_lapak,Lapak dekat taman jual buah apa?,lapak=Dekat Taman
+buah_per_lapak,Saya mau lihat buah di lapak dekat taman,lapak=Dekat Taman
+buah_per_lapak,Lapak dekat taman ada buah apa?,lapak=Dekat Taman
+buah_per_lapak,Stok buah di dekat taman apa saja?,lapak=Dekat Taman
+buah_per_lapak,Ada berapa macam buah di lapak dekat taman?,lapak=Dekat Taman
+buah_per_lapak,Tampilkan buah-buahan di lapak dekat taman,lapak=Dekat Taman
+buah_per_lapak,Buah apa saja yang dijual di lapak dekat taman?,lapak=Dekat Taman
+buah_per_penjual,Penjual Pak Budi jual buah apa saja?,penjual=Pak Budi
+buah_per_penjual,Apa buah yang dijual Pak Budi?,penjual=Pak Budi
+buah_per_penjual,Saya ingin tahu buah-buahan yang dijual oleh Pak Budi,penjual=Pak Budi
+buah_per_penjual,Buah apa saja yang bisa dibeli dari Pak Budi?,penjual=Pak Budi
+buah_per_penjual,Ada buah apa di lapaknya Pak Budi?,penjual=Pak Budi
+buah_per_penjual,Bu Rina jual buah apa aja?,penjual=Bu Rina
+buah_per_penjual,Buah yang dijual Bu Rina apa saja?,penjual=Bu Rina
+buah_per_penjual,Saya ingin tahu buah dari lapak Bu Rina,penjual=Bu Rina
+buah_per_penjual,Buah apa saja yang tersedia dari Bu Rina?,penjual=Bu Rina
+buah_per_penjual,Di lapaknya Bu Rina jual buah apa?,penjual=Bu Rina

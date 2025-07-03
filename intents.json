@@ -1,0 +1,53 @@
+{
+  "intents": [
+    {
+      "tag": "cek_harga",
+      "patterns": [
+        "Berapa harga apel?",
+        "Harga jeruk berapa?",
+        "Saya mau tahu harga pisang",
+        "Tomat harganya berapa?",
+        "Berapa biaya untuk melon?"
+      ]
+    },
+    {
+      "tag": "cek_stok",
+      "patterns": [
+        "Apakah ada stok apel?",
+        "Berapa stok jeruk?",
+        "Pisang masih ada?",
+        "Melon masih tersedia?",
+        "Saya ingin tahu stok tomat"
+      ]
+    },
+    {
+      "tag": "asal_buah",
+      "patterns": [
+        "Apel dari mana asalnya?",
+        "Asal jeruk itu dari mana?",
+        "Pisang berasal dari mana?",
+        "Dari mana asal tomat?",
+        "Melon asalnya mana?"
+      ]
+    },
+    {
+      "tag": "daftar_buah",
+      "patterns": [
+        "Buah apa saja yang tersedia?",
+        "Daftar buah yang ada",
+        "Apa saja buah yang dijual?",
+        "Saya mau lihat buah yang tersedia",
+        "Ada buah apa saja?"
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [
+        "Halo",
+        "Kamu siapa?",
+        "Saya lapar",
+        "Cuaca hari ini bagaimana?"
+      ]
+    }
+  ]
+}
