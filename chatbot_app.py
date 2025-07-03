@@ -11,10 +11,16 @@ from nltk.stem.porter import PorterStemmer
 import json
 import re
 import random
+import os
+
+# ✅ Pastikan punkt tersedia
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 # Inisialisasi
 stemmer = PorterStemmer()
-nltk.download('punkt')
 
 def tokenize(sentence):
     return nltk.word_tokenize(sentence)
@@ -30,7 +36,7 @@ def bag_of_words(tokenized_sentence, all_words):
             bag[idx] = 1.0
     return bag
 
-# Load model
+# === Load model ===
 data = torch.load("data_buah.pth")
 
 input_size = data["input_size"]
@@ -60,10 +66,46 @@ model = NeuralNet(input_size, hidden_size, output_size)
 model.load_state_dict(model_state)
 model.eval()
 
-# Load dataset buah
-buah_df = pd.read_csv("dataset_buah.csv")  # Kolom: nama, harga, asal, stok
+# === Load dataset buah ===
+try:
+    buah_df = pd.read_csv("dataset_buah.csv")
+    expected_columns = {"nama", "harga", "asal", "stok"}
+    if not expected_columns.issubset(set(buah_df.columns)):
+        st.error(f"❌ Kolom CSV tidak sesuai. Diharapkan: {expected_columns}")
+        st.stop()
+except Exception as e:
+    st.error(f"❌ Gagal membaca dataset_buah.csv: {e}")
+    st.stop()
 
-# Generator respon
+# === Ekstraksi entitas ===
+def extract_entity(text):
+    entity = {}
+    nama_buah_list = buah_df["nama"].dropna().unique()
+    for nama in nama_buah_list:
+        if nama.lower() in text.lower():
+            entity["nama_buah"] = nama
+            break
+    return entity
+
+# === Prediksi intent ===
+def predict_class(sentence):
+    sentence = tokenize(sentence)
+    X = bag_of_words(sentence, all_words)
+    X = torch.from_numpy(X).float().unsqueeze(0)
+
+    output = model(X)
+    _, predicted = torch.max(output, dim=1)
+    tag = tags[predicted.item()]
+
+    probs = torch.softmax(output, dim=1)
+    prob = probs[0][predicted.item()]
+
+    if prob.item() > 0.40:
+        return tag
+    else:
+        return "unknown"
+
+# === Generator respon ===
 def get_response(intent, entity):
     if intent == "cek_harga" and entity.get("nama_buah"):
         result = buah_df[buah_df["nama"].str.lower() == entity["nama_buah"].lower()]
@@ -87,43 +129,13 @@ def get_response(intent, entity):
             return "Kami belum tahu asal buah itu."
 
     elif intent == "daftar_buah":
-        buah_list = buah_df["nama"].tolist()
+        buah_list = buah_df["nama"].dropna().tolist()
         return "Berikut adalah buah yang tersedia:\n- " + "\n- ".join(buah_list)
 
     else:
         return "Maaf, saya belum bisa membantu untuk pertanyaan itu."
 
-# Ekstraksi entitas
-def extract_entity(text):
-    entity = {}
-    nama_buah_list = buah_df["nama"].dropna().unique()
-
-    for nama in nama_buah_list:
-        if nama.lower() in text.lower():
-            entity["nama_buah"] = nama
-            break
-
-    return entity
-
-# Prediksi intent
-def predict_class(sentence):
-    sentence = tokenize(sentence)
-    X = bag_of_words(sentence, all_words)
-    X = torch.from_numpy(X).float().unsqueeze(0)
-
-    output = model(X)
-    _, predicted = torch.max(output, dim=1)
-    tag = tags[predicted.item()]
-
-    probs = torch.softmax(output, dim=1)
-    prob = probs[0][predicted.item()]
-
-    if prob.item() > 0.40:
-        return tag
-    else:
-        return "unknown"
-
-# Streamlit UI
+# === Streamlit UI ===
 st.title("🍎 Chatbot Penjual Buah")
 st.markdown("Tanyakan tentang harga, stok, atau asal buah yang tersedia.")
 
